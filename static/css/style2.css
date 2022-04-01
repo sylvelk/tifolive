@@ -1,0 +1,30 @@
+#home-div {
+    background: url('../img/cover.png') center;
+}
+
+.main-div {
+    height: 300px;
+}
+
+.layout-transparent .mdl-layout__header,
+.layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+       your background is light. */
+    color: white;
+}
+
+.btn-facebook {
+    background: url("../img/facebook-box.png") center /cover;
+}
+
+.btn-email {
+    background: url("../img/email.png") center /cover;
+}
+
+.btn-instagram {
+    background: url("../img/instagram.png") center /cover;
+}
+
+.btn-twitter {
+    background: url("../img/twitter-box.png") center /cover;
+}

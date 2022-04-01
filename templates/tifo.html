@@ -1,0 +1,47 @@
+{% extends "main.html" %}
+{% block main %}
+    <section class="mdl-typography--text-center" xmlns="http://www.w3.org/1999/html">
+        <h1>Tifo name</h1>
+        <h2>Welcome, please choose your seat number or sector</h2>
+
+        <form method="get">
+            {% if sector %}
+            <span>Sector {{ sector }}</span>
+            {% else %}
+            <select name="sector" id="select-sector">
+                <optgroup label="Seated">
+                    <option value="A">Sector A</option>
+                    <option value="B">Sector B</option>
+                    <option value="C">Sector C</option>
+                    <option value="D">Sector D</option>
+                </optgroup>
+                <optgroup label="Standing">
+                    <option value="E">Sector E</option>
+                    <option value="F">Sector F</option>
+                    <option value="G">Sector G</option>
+                    <option value="H">Sector H</option>
+                </optgroup>
+            </select>
+            {% end %}
+            {% if row %}
+            <span>Row {{ row }}</span>
+            {% else %}
+            <select name="row" id="select-row">
+                <option value="$">-</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            {% end %}
+            {% if seat %}
+            <span>Seat {{ seat }}</span>
+            {% else %}
+            <select name="seat" id="select-seat">
+                <option value="$">-</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            {% end %}
+            <input type="submit">
+        </form>
+    </section>
+{% end %}

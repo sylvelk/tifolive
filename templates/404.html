@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% block main %}
+    <section class="tifolive-not-found-section mdl-typography--text-center" xmlns="http://www.w3.org/1999/html">
+        <div class="logo-font tifolive-slogan">Woops ! Something went wrong</div>
+        <div class="logo-font tifolive-sub-slogan">Sorry, but this webpage doesn't seem to exist
+        </div>
+        <div class="logo-font tifolive-create-character">
+            <a href="{{ url_for('index') }}">
+            <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--fab tifolive-return">
+                <i class="material-icons">chevron_left</i>
+            </button>
+            </a>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,562 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+    margin: 0;
+}
+
+/* Disable ugly boxes around images in IE10 */
+a img {
+    border: 0px;
+}
+
+::-moz-selection {
+    /*background-color: #6ab344;*/
+    /*color: #fff;*/
+}
+
+::selection {
+    /*background-color: #6ab344;*/
+    /*color: #fff;*/
+}
+
+.tifolive-search-box .mdl-textfield__input {
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.tifolive-header .mdl-menu__container {
+    z-index: 50;
+    margin: 0 !important;
+}
+
+.mdl-textfield--expandable {
+    width: auto;
+}
+
+.tifolive-fab {
+    position: absolute;
+    right: 20%;
+    bottom: -26px;
+}
+
+.tifolive-return {
+    position: absolute;
+    left: 10%;
+    bottom: +30px;
+}
+
+.tifolive-mobile-title {
+    display: none !important;
+}
+
+.tifolive-logo-image {
+    height: 28px;
+    width: 28px;
+}
+
+.tifolive-header {
+    overflow: visible;
+    /*background-color: white;*/
+}
+
+.tifolive-header .material-icons {
+    /*color: #767777 !important;*/
+}
+
+.tifolive-header .mdl-layout__drawer-button {
+    background: transparent;
+    /*color: #767777;*/
+}
+
+.tifolive-header .mdl-navigation__link {
+    /*color: #757575;*/
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.tifolive-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tifolive-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 800px;
+}
+
+.tifolive-search-box.is-focused + .tifolive-navigation-container {
+    opacity: 0;
+    width: 100px;
+}
+
+.tifolive-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+}
+
+.tifolive-navigation .mdl-navigation__link:hover {
+    /*border-bottom: 4px solid #8bc34a;*/
+}
+
+.tifolive-search-box {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.tifolive-more-button {
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+}
+
+.tifolive-drawer {
+    border-right: none;
+}
+
+.tifolive-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+}
+
+.tifolive-drawer .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #757575;
+}
+
+.tifolive-drawer span.mdl-navigation__link.mdl-navigation__link {
+    /*color: #8bc34a;*/
+}
+
+.tifolive-drawer .mdl-layout-title {
+    position: relative;
+    background: #FF5252;
+    height: 160px;
+}
+
+.tifolive-drawer .tifolive-logo-image {
+    position: absolute;
+    bottom: 16px;
+}
+
+.tifolive-bring-life-section {
+    position: relative;
+    height: 800px;
+    width: auto;
+    /*background-color: #f3f3f3;*/
+    background: url('../img/cover.png') center 30% no-repeat;
+    background-size: cover;
+}
+
+.tifolive-not-found-section {
+    position: relative;
+    height: 400px;
+    width: auto;
+    /*background-color: #f3f3f3;*/
+    background: url('../img/cover.png') center 30% no-repeat;
+    background-size: cover;
+}
+
+.logo-font {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1;
+    color: #767777;
+    font-weight: 500;
+}
+
+.tifolive-slogan {
+    font-size: 60px;
+    padding-top: 160px;
+}
+
+.tifolive-sub-slogan {
+    font-size: 21px;
+    padding-top: 24px;
+}
+
+.tifolive-create-character {
+    font-size: 21px;
+    padding-top: 400px;
+}
+
+.tifolive-create-character a {
+    text-decoration: none;
+    color: #767777;
+    font-weight: 300;
+}
+
+.tifolive-screen-section {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.tifolive-screens {
+    text-align: right;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.tifolive-screen {
+    text-align: center;
+}
+
+.tifolive-screen .tifolive-link {
+    margin-top: 16px;
+    display: block;
+    z-index: 2;
+}
+
+.tifolive-image-link {
+    text-decoration: none;
+}
+
+.tifolive-wear {
+    display: inline-block;
+    width: 160px;
+    margin-right: 32px;
+}
+
+.tifolive-wear .tifolive-screen-image {
+    width: 40%;
+    z-index: 1;
+}
+
+.tifolive-phone {
+    display: inline-block;
+    width: 64px;
+    margin-right: 48px;
+}
+
+.tifolive-phone .tifolive-screen-image {
+    width: 100%;
+    z-index: 1;
+}
+
+.tifolive-tablet {
+    display: inline-block;
+    width: 110px;
+    margin-right: 64px;
+}
+
+.tifolive-tablet .tifolive-screen-image {
+    width: 100%;
+    z-index: 1;
+}
+
+.tifolive-tablet .tifolive-link {
+    display: block;
+    z-index: 2;
+}
+
+.tifolive-tv {
+    display: inline-block;
+    width: 300px;
+    margin-right: 80px;
+}
+
+.tifolive-tv .tifolive-screen-image {
+    width: 100%;
+    z-index: 1;
+}
+
+.tifolive-auto {
+    display: inline-block;
+    width: 300px;
+    overflow: hidden;
+}
+
+.tifolive-auto .tifolive-screen-image {
+    display: block;
+    height: 300px;
+    z-index: 1;
+}
+
+.tifolive-wear-section {
+    position: relative;
+    background: url('../img/wear.png') center top no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+
+.tifolive-wear-band {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #37474f;
+}
+
+.tifolive-wear-band-text {
+    max-width: 800px;
+    margin-left: 25%;
+    padding: 24px;
+    text-align: left;
+    color: white;
+}
+
+.tifolive-wear-band-text p {
+    padding-top: 8px;
+}
+
+.tifolive-link {
+    text-decoration: none;
+    /*color: #8bc34a !important;*/
+}
+
+.tifolive-link:hover {
+    /*color: #7cb342 !important;*/
+}
+
+.tifolive-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+}
+
+.tifolive-alt-link {
+    text-decoration: none;
+    /*color: #64ffda !important;*/
+    font-size: 16px;
+}
+
+.tifolive-alt-link:hover {
+    /*color: #00bfa5 !important;*/
+}
+
+.tifolive-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+}
+
+.tifolive-customized-section {
+    text-align: center;
+}
+
+.tifolive-customized-section-text {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 80px 16px 0 16px;
+}
+
+.tifolive-customized-section-text p {
+    padding-top: 16px;
+}
+
+.tifolive-customized-section-image {
+    background: url('../img/devices.jpg') center top no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.tifolive-more-section {
+    padding: 80px 0;
+    max-width: 1044px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tifolive-more-section .tifolive-section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+}
+
+.tifolive-card-container {
+}
+
+.tifolive-card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+}
+
+.tifolive-card-container .mdl-card__media img {
+    width: 100%;
+}
+
+.tifolive-card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+}
+
+.tifolive-card-container .mdl-card__title-text {
+    color: black;
+    height: auto;
+}
+
+.tifolive-card-container .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 56px;
+}
+
+.tifolive-card-container .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+}
+
+.tifolive-card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+}
+
+.tifolive-footer {
+    background-color: #fafafa;
+    position: relative;
+}
+
+.tifolive-footer a:hover {
+    /*color: #8bc34a;*/
+}
+
+.tifolive-footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+}
+
+.tifolive-footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+}
+
+.tifolive-footer .mdl-mega-footer--bottom-section {
+    position: relative;
+}
+
+.tifolive-footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+}
+
+.tifolive-footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+}
+
+.tifolive-link-menu:hover {
+    cursor: pointer;
+}
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+    .tifolive-navigation-container {
+        display: none;
+    }
+
+    .tifolive-title {
+        display: none !important;
+    }
+
+    .tifolive-mobile-title {
+        display: block !important;
+        position: absolute;
+        left: calc(50% - 70px);
+        top: 12px;
+        transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+       consecutive "+" operators in some cases. Therefore, we need to use both
+       here to cover all the bases. */
+    .tifolive.tifolive-search-box.is-focused ~ .tifolive-mobile-title,
+    .tifolive-search-box.is-focused + .tifolive-navigation-container + .tifolive-mobile-title {
+        opacity: 0;
+    }
+
+    .tifolive-more-button {
+        display: none;
+    }
+
+    .tifolive-search-box.is-focused {
+        width: calc(100% - 48px);
+    }
+
+    .tifolive-search-box .mdl-textfield__expandable-holder {
+        width: 100%;
+    }
+
+    .tifolive-bring-life-section {
+        height: 350px;
+    }
+
+    .tifolive-not-found-section {
+        height: 350px;
+    }
+
+    .tifolive-slogan {
+        font-size: 26px;
+        margin: 0 16px;
+        padding-top: 24px;
+    }
+
+    .tifolive-sub-slogan {
+        font-size: 16px;
+        margin: 0 16px;
+        padding-top: 8px;
+    }
+
+    .tifolive-create-character {
+        padding-top: 200px;
+        font-size: 16px;
+    }
+
+    .tifolive-create-character img {
+        height: 12px;
+    }
+
+    .tifolive-fab {
+        display: none;
+    }
+
+    .tifolive-wear-band-text {
+        margin-left: 0;
+        padding: 16px;
+    }
+
+    .tifolive-footer .mdl-mega-footer--bottom-section {
+        display: none;
+    }
+}
+
+/*#facebook-btn {*/
+/*background: url('../img/facebook-box.png') center /cover;*/
+/*}*/
+
+/*#twitter-btn {*/
+/*background: url('../img/twitter-box.png') center /cover;*/
+/*}*/
+
+/*#instagram-btn {*/
+/*background: url('../img/instagram.png') center /cover;*/
+/*}*/
+
+/*#email-btn {*/
+/*background: url('../img/email.png') center /cover;*/
+/*}*/

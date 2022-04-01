@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bring your tifo to life, with TifoLive.xyz !">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>TifoLive</title>
+    <link rel="icon" type="image/png" href="{{ static_url('img/favicon.png') }}">
+
+    <script src="{{ static_url('js/jquery-3.1.0.min.js') }}"></script>
+    <script src="{{ static_url('js/screenfull.min.js') }}"></script>
+</head>
+
+<body>
+<span id="span-ping"></span><br>
+<span id="span-users-online"></span>
+<button id="button-fullscreen">Full screen</button>
+<script src="{{ static_url('js/pixel.js') }}"></script>
+</body>
+</html>

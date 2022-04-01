@@ -1,0 +1,64 @@
+{% extends "main.html" %}
+{% block body %}
+    <div class="mdl-layout mdl-js-layout">
+         <!------------------------------------------    HEADER SECTION ----------------------------------------------->
+        <header class="mdl-layout__header mdl-layout__header--waterfall">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">TifoLive</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="#home-div">Home</a>
+                    <a class="mdl-navigation__link" href="#about-div">About</a>
+                    <a class="mdl-navigation__link" href="#stadium-div">Stadiums</a>
+                    <a class="mdl-navigation__link" href="#join-div">Join</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">TifoLive</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="#home-div">Home</a>
+                <a class="mdl-navigation__link" href="#about-div">About</a>
+                <a class="mdl-navigation__link" href="#stadium-div">Stadiums</a>
+                <a class="mdl-navigation__link" href="#join-div">Join</a>
+            </nav>
+        </div>
+        <!------------------------------------------    MAIN SECTION    ----------------------------------------------->
+        <main class="mdl-layout__content">
+            <div class="mdl-grid mdl-grid--no-spacing">
+                <div class="mdl-cell mdl-cell--12-col main-div" id="home-div">Home div</div>
+                <div class="mdl-cell mdl-cell--12-col main-div" id="about-div">About div</div>
+                <div class="mdl-cell mdl-cell--12-col main-div" id="stadium-div">Stadiums div</div>
+                <div class="mdl-cell mdl-cell--12-col main-div" id="join-div">Join us div</div>
+            </div>
+        </main>
+        <!------------------------------------------    FOOTER SECTION  ----------------------------------------------->
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+                <div class="mdl-logo">&copy; TifoLive.xyz - 2016</div>
+                <ul class="mdl-mini-footer__link-list">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Prices</a></li>
+                </ul>
+            </div>
+            <div class="mdl-mini-footer__right-section">
+                <a href="https://www.facebook.com/TifoLivexyz-246069875763602">
+                    <button class="mdl-mini-footer__social-btn btn-facebook"></button>
+                </a>
+                <a href="https://www.twitter.com/">
+                    <button class="mdl-mini-footer__social-btn btn-twitter"></button>
+                </a>
+                <a href="https://www.instagram.com/">
+                    <button class="mdl-mini-footer__social-btn btn-instagram"></button>
+                </a>
+                <a href="mailto:info@tifolive.xyz">
+                    <button class="mdl-mini-footer__social-btn btn-email"></button>
+                </a>
+            </div>
+        </footer>
+    </div>
+{% endblock %}
